@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header-container">
+        <i class="fas fa-bars" onclick="toggleIcon()"></i>
+        <h2>sneakers</h2>
+        <ul class="links-container">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="cart-profile-section">
+            <div class="cart-icon">
+                <div class="badge" id="badge_value" onchange="handleChange()">
+                    
+                </div>
+                <img src="icons/icon-cart.svg" alt="cart-logo"  onclick="displayDetails()">
+            </div>
+            <div class="profile-section">
+                <img src="images/image-avatar.png" alt="profile-logo">
+            </div>
+        </div>
+    </header>
+    <section class="main-content wraper">
+        <div class="image-section">
+            <div class="main-image">
+                <img src="images/image-product-1.jpg" alt="">
+            </div>
+            <div class="sub-image img-list">
+                <img src="images/image-product-1-thumbnail.jpg" alt="img">
+                <img src="images/image-product-2-thumbnail.jpg" alt="img">
+                <img src="images/image-product-3-thumbnail.jpg" alt="img">
+                <img src="images/image-product-4-thumbnail.jpg" alt="img">
+            </div>
+        </div>
+        <div class="content">
+            <p>sneaker company</p>
+            <h1 id="heading-content">Fall Limited Edition <br> Sneakers</h1>
+            <p id="desc">
+                These low-profile sneakers are your perfect casual wear
+                companion. Featuring a durable rubber outer sole, they'll
+                withstand everything the weather can offer.
+            </p>
+            <div class="price-details">
+                <h2 id="p">$125.00</h2><span id="disc">50%</span>
+            </div>
+            <h4 id="actual-price"><strike>$250.00</strike></h4>
+            <div class="quantity">
+                <div class="inc-or-dec">
+                    <button onclick="handleDecreament()" id="minus_btn">
+                        <img src="icons/icon-minus.svg" id="minus" alt="">
+                    </button>
+                    <div class="quan_value" id="quantity_value"></div>
+                    <button onclick="handleIncreament()" id="plus_btn">
+                        <img src="icons/icon-plus.svg" id="plus" alt="">
+                    </button>
+                </div>
+                <div class="cart-button">
+                    <button>
+                        <img src="icons/icon-cart-white.svg" alt="">
+                        <span>Add to cart</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cart-list" id="cart-list">
+        <h3>Cart</h3>
+        <div class="cart-box">
+            <p id="cart-info">Your cart is empty.</p>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
