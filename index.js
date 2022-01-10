@@ -36,6 +36,7 @@ function displayDetails () {
 
 function toggleIcon () {
     document.getElementById('side-menu').style.transform = 'translate(0%)';
+    document.getElementById('close-icon').style.display= 'block';
     document.getElementById ('links-container').style.transform = 'translate(0%)';
 }
 

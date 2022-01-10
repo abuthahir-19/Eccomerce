@@ -411,14 +411,15 @@ div.img-list img {
         position: absolute;
         top: 0;
         transform: translate(-100%);
-        transition: 1s;
+        transition: 0.8s;
     }
 
-    div.side-menu > i {
+    div.side-menu > .fas {
         cursor: pointer;
         position: absolute;
         left: 1.5rem;
         top: 2rem;
+        display: none;
     }
 
     ul {
@@ -429,6 +430,6 @@ div.img-list img {
         z-index: 100;
         top: 4rem;
         transform: translate(-120%);
-        transition: transform 1s;
+        transition: transform 0.8s;
     }
 }
