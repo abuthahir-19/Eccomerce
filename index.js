@@ -1,5 +1,6 @@
 var count = 0;
 var clicked = false;
+var menuIconClicked = false;
 var updated;
 
 var x = document.getElementById ('quantity_value');
@@ -30,4 +31,15 @@ function displayDetails () {
     cartBox.style.display = 'block';
     else cartBox.style.display = 'none';
     clicked = !clicked;
+}
+
+
+function toggleIcon () {
+    document.getElementById('side-menu').style.transform = 'translate(0%)';
+    document.getElementById ('links-container').style.transform = 'translate(0%)';
+}
+
+function closeSideMenu () {
+    document.getElementById ('side-menu').style.transform = 'translate(-100%)';
+    document.getElementById ('links-container').style.transform = 'translate(-120%)';
 }
