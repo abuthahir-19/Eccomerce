@@ -8,7 +8,7 @@
   <title>E-commerce product page</title>
   <link rel="stylesheet" href="styles.css">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 
 <body>
@@ -79,9 +79,19 @@
     </section>
     <div class="cart-list" id="cart-list">
         <h3>Cart</h3>
-        <div class="cart-box">
-            <p id="cart-info">Your cart is empty.</p>
+        <div id="cart-box" class="cart-box">
+            <img id="product_photo" src="images/image-product-1-thumbnail.jpg" alt="">
+            <div id="item-details" class="item-details">
+                <li><p id="cart-info">Fall Limited Edition Sneakers</p></li>
+                <li><p>$125.00 x </p></li>
+                <li><p id="number_of_quantity"> </p></li>
+                <li><p id="total_price"></p></li>
+            </div>
+            <img id="delete_icon" src="icons/icon-delete.svg" alt="" onclick="deleteItems()">
+            <p id="item-count"></p><br>
+            <p id="empty"></p>
         </div>
+        <button id="checkout_button">Checkout</button>
     </div>
 
     <div id="side-menu" class="side-menu">
