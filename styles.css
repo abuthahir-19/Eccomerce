@@ -127,6 +127,19 @@ div.image-section > .main-image{
     margin-left: 18px;
     width: 15.2%;
     border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
+.img-list img::after {
+    content: '';
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 1000;
 }
 
 div.content {
@@ -267,11 +280,6 @@ div.cart-list {
 div.cart-list > h3 {
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(228, 228, 228);
-}
-
-div.img-list img {
-    cursor: pointer;
-    border: 2px solid hsl(26, 100%, 55%);
 }
 
 div.side-menu {

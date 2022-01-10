@@ -139,6 +139,21 @@ function addToCart () {
 
 //image rendering section
 
-var image = document.getElementById ('2');
-var mainImage = document.getElementById ('main-image-section');
+// var image = document.getElementById ('2');
+// var mainImage = document.getElementById ('main-image-section');
 
+
+
+// var image = document.createElement ('img');
+// image.src = 'images/image-product-1.jpg';
+// image.style.width = '30%';
+// image.style.height = '40%';
+
+var element = document.getElementById ('image-section');
+
+
+function renderAsMainImage (id) {
+    var imgTag = document.getElementById (id).getAttribute('src');
+    imgTag = imgTag.slice (0, imgTag.indexOf('-thumbnail')) + '.jpg';
+    element.firstElementChild.firstElementChild.setAttribute('src', imgTag);
+}
