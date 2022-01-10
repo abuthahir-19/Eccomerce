@@ -266,6 +266,9 @@ div.img-list img {
     border: 2px solid hsl(26, 100%, 55%);
 }
 
+div.side-menu {
+    display: none;
+}
 @media screen and (max-width: 1170px) {
     section.main-content {
         display: flex;
@@ -405,6 +408,7 @@ div.img-list img {
     }
 
     div.side-menu {
+        display: block;
         width: 60%;
         height: 130vh;
         background-color: #fff;
@@ -417,7 +421,7 @@ div.img-list img {
     div.side-menu > .fas {
         cursor: pointer;
         position: absolute;
-        left: 1.5rem;
+        left: 2rem;
         top: 2rem;
         display: none;
     }
