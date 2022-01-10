@@ -35,50 +35,50 @@ if (count == 0) {
 
 function handleIncreament () {
     count += 1;
-    if (count == 1) {
-        cartBoxContent.style.height = '80%';
-    }
+    // if (count == 1) {
+    //     cartBoxContent.style.height = '80%';
+    // }
     if (count > 0) {
-        badge.style.display = 'flex';
-        badge.style.paddingTop = '2px';
-        ItemCount.innerHTML = count;
+        // badge.style.display = 'flex';
+        // badge.style.paddingTop = '2px';
+        // ItemCount.innerHTML = count;
 
-        let tot = String(125 * count);
-        totalPrice.innerHTML = ' $' + tot.padEnd (tot.length + 3, '.00');
+        // let tot = String(125 * count);
+        // totalPrice.innerHTML = ' $' + tot.padEnd (tot.length + 3, '.00');
 
-        productPhoto.style.display = 'block';
-        checkoutBtn.style.display = 'block';
-        itemDet.style.display = 'block';
-        delIcon.style.display = 'block';
-        whenEmpty.innerHTML = '';
+        // productPhoto.style.display = 'block';
+        // checkoutBtn.style.display = 'block';
+        // itemDet.style.display = 'block';
+        // delIcon.style.display = 'block';
+        // whenEmpty.innerHTML = '';
     }
     updated = count;
-    badge.innerHTML = count;
+    // badge.innerHTML = count;
     x.innerHTML = count;
 }
 
 function handleDecreament () {
     if (count !== 0) {
         count -= 1;
-        ItemCount.innerHTML = count;
+        // ItemCount.innerHTML = count;
 
-        let tot = String(125 * count);
-        totalPrice.innerHTML = ' $' + tot.padEnd (tot.length + 3, '.00');
+        // let tot = String(125 * count);
+        // totalPrice.innerHTML = ' $' + tot.padEnd (tot.length + 3, '.00');
     }
     if (count == 0) {
         badge.style.display = 'none';
         x.innerHTML = 0;
 
-        productPhoto.style.display = 'none';
-        checkoutBtn.style.display = 'none';
-        itemDet.style.display = 'none';
-        delIcon.style.display = 'none';
+        // productPhoto.style.display = 'none';
+        // checkoutBtn.style.display = 'none';
+        // itemDet.style.display = 'none';
+        // delIcon.style.display = 'none';
 
-        whenEmpty.innerHTML = 'Your cart is empty.';
-        cartBoxContent.style.width = '100%';
-        cartBoxContent.style.height = '100%';
+        // whenEmpty.innerHTML = 'Your cart is empty.';
+        // cartBoxContent.style.width = '100%';
+        // cartBoxContent.style.height = '100%';
     }
-    badge.innerHTML = count;
+    // badge.innerHTML = count;
     x.innerHTML = count;
 }
 
@@ -116,4 +116,23 @@ function toggleIcon () {
 function closeSideMenu () {
     document.getElementById ('side-menu').style.transform = 'translate(-100%)';
     document.getElementById ('links-container').style.transform = 'translate(-120%)';
+}
+
+function addToCart () {
+    if (count > 0) {
+        cartBoxContent.style.height = '80%';
+        badge.style.display = 'flex';
+        badge.style.paddingTop = '2px';
+        badge.innerHTML = count;
+        ItemCount.innerHTML = count;
+
+        let tot = String(125 * count);
+        totalPrice.innerHTML = ' $' + tot.padEnd (tot.length + 3, '.00');
+
+        productPhoto.style.display = 'block';
+        checkoutBtn.style.display = 'block';
+        itemDet.style.display = 'block';
+        delIcon.style.display = 'block';
+        whenEmpty.innerHTML = '';
+    }
 }
