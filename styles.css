@@ -9,7 +9,7 @@
 
 .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-    
+
 body {
     display: flex;
     flex-direction: column;
@@ -221,6 +221,11 @@ div.cart-button > button, div.quantity > div.inc-or-dec > button {
 
 div.cart-button > button > img {
     margin-right: 20px;
+}
+
+div.quantity > div.cart-button > button:hover {
+    background-color: hsl(25, 100%, 49%);
+    transition: .4s;
 }
 
 div.quantity > button > #minus {

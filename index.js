@@ -136,3 +136,9 @@ function addToCart () {
         whenEmpty.innerHTML = '';
     }
 }
+
+//image rendering section
+
+var image = document.getElementById ('2');
+var mainImage = document.getElementById ('main-image-section');
+
