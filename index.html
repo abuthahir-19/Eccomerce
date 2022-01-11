@@ -38,7 +38,7 @@
     <section class="main-content wraper">
         <div id="image-section" class="image-section">
             <div class="main-image" id="main-image-section">
-                <img src="images/image-product-1.jpg" alt="">
+                <img src="images/image-product-1.jpg" alt="m-img"  onclick="displayImageDetails()">
             </div>
             <div class="sub-image img-list">
                 <img src="images/image-product-1-thumbnail.jpg" alt="img" id="1" onclick="renderAsMainImage (1)">
@@ -102,6 +102,22 @@
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">SYED ABUTHAHIR</a>.
+    </div>
+
+    <div id="image-wrapper" class="image-wrapper">
+        
+        <div id="image-details" class="image-details">
+            <img id="close-icon-detail-image" src="icons/icon-close-orange.svg" alt="" onclick="closeImageDetailsInfo()">
+            <div id="big-image" class="big-image">
+                <img src="images/image-product-1.jpg" alt="">
+            </div>
+            <div class="sublist-images">
+                <img id="5" src="images/image-product-1-thumbnail.jpg" alt="" onclick="renderAsMainImage(5, true)">
+                <img id="6" src="images/image-product-2-thumbnail.jpg" alt="" onclick="renderAsMainImage(6, true)">
+                <img id="7" src="images/image-product-3-thumbnail.jpg" alt="" onclick="renderAsMainImage(7, true)">
+                <img id="8" src="images/image-product-4-thumbnail.jpg" alt="" onclick="renderAsMainImage(8, true)">
+            </div>
+        </div>
     </div>
 </body>
 <script src="index.js"></script>

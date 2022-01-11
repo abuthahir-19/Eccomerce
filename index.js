@@ -140,10 +140,29 @@ function addToCart () {
 //image rendering section
 
 var element = document.getElementById ('image-section');
+var imageParent = document.getElementById ('image-details');
 
+function renderAsMainImage (id, active) {
+    var imgTag;
+    if (active == undefined) {
+        imgTag = document.getElementById (id).getAttribute('src');
+        imgTag = imgTag.slice (0, imgTag.indexOf('-thumbnail')) + '.jpg';
+        element.firstElementChild.firstElementChild.setAttribute('src', imgTag);
+    }
+    else if (active) {
+        imgTag = document.getElementById (id).getAttribute('src');
+        imgTag = imgTag.slice (0, imgTag.indexOf('-thumbnail')) + '.jpg';
+        imageParent.firstElementChild.nextElementSibling.firstElementChild.setAttribute ('src', imgTag);
+    }
+}
 
-function renderAsMainImage (id) {
-    var imgTag = document.getElementById (id).getAttribute('src');
-    imgTag = imgTag.slice (0, imgTag.indexOf('-thumbnail')) + '.jpg';
-    element.firstElementChild.firstElementChild.setAttribute('src', imgTag);
+//breif description of image 
+function displayImageDetails () {
+    var screen = window.matchMedia ("(min-width: 1171px)");
+    if (screen.matches)
+    document.getElementById('image-wrapper').style.display = 'block';
+}
+
+function closeImageDetailsInfo() {
+    document.getElementById('image-wrapper').style.display = 'none';
 }
