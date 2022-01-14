@@ -28,7 +28,7 @@
                 <div class="badge" id="badge_value" onchange="handleChange()">
                     
                 </div>
-                <img src="icons/icon-cart.svg" alt="cart-logo"  onclick="displayDetails()">
+                <img src="icons/icon-cart.svg" alt="cart-logo"  onclick="displayCartDetails()">
             </div>
             <div class="profile-section">
                 <img src="images/image-avatar.png" alt="profile-logo">
@@ -37,14 +37,20 @@
     </header>
     <section class="main-content wraper">
         <div id="image-section" class="image-section">
+            <div class="swipe-icon prev_div main_page_image" onclick="showPrevImage(false)">
+                <img id="previous_icon" src="icons/icon-previous.svg" alt="previous_icon">
+            </div>
             <div class="main-image" id="main-image-section">
-                <img src="images/image-product-1.jpg" alt="m-img"  onclick="displayImageDetails()">
+                <img id="main_front_image" src="images/image-product-1.jpg" alt="m-img"  onclick="displayImageDetails()">
+            </div>
+            <div class="swipe-icon next_div main_page_image" onclick="showNextImage(false)">
+                <img id="next_icon" src="icons/icon-next.svg" alt="next_icon">
             </div>
             <div class="sub-image img-list">
-                <img src="images/image-product-1-thumbnail.jpg" alt="img" id="1" onclick="renderAsMainImage (1)">
-                <img src="images/image-product-2-thumbnail.jpg" alt="img" id="2" onclick="renderAsMainImage (2)">
-                <img src="images/image-product-3-thumbnail.jpg" alt="img" id="3" onclick="renderAsMainImage (3)">
-                <img src="images/image-product-4-thumbnail.jpg" alt="img" id="4" onclick="renderAsMainImage (4)">
+                <img src="images/image-product-1-thumbnail.jpg" alt="img" id="1" onclick="renderAsMainImage (1, false)">
+                <img src="images/image-product-2-thumbnail.jpg" alt="img" id="2" onclick="renderAsMainImage (2, false)">
+                <img src="images/image-product-3-thumbnail.jpg" alt="img" id="3" onclick="renderAsMainImage (3, false)">
+                <img src="images/image-product-4-thumbnail.jpg" alt="img" id="4" onclick="renderAsMainImage (4, false)">
             </div>
         </div>
         <div class="content">
@@ -105,11 +111,16 @@
     </div>
 
     <div id="image-wrapper" class="image-wrapper">
-        
         <div id="image-details" class="image-details">
             <img id="close-icon-detail-image" src="icons/icon-close-orange.svg" alt="" onclick="closeImageDetailsInfo()">
             <div id="big-image" class="big-image">
-                <img src="images/image-product-1.jpg" alt="">
+                <div class="swipe-icon prev_div" onclick="showPrevImage(true)">
+                    <img id="previous_icon" src="icons/icon-previous.svg" alt="previous_icon">
+                </div>
+                <img id="main_image" src="images/image-product-1.jpg" alt="main_image">
+                <div class="swipe-icon next_div" onclick="showNextImage(true)">
+                    <img id="next_icon" src="icons/icon-next.svg" alt="next_icon">
+                </div>
             </div>
             <div class="sublist-images">
                 <img id="5" src="images/image-product-1-thumbnail.jpg" alt="" onclick="renderAsMainImage(5, true)">

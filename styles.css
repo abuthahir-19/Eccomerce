@@ -91,6 +91,8 @@ div.cart-icon > div.badge {
     border-radius: 28px;
 }
 
+/* Starting point of the main content wrapper */
+
 section.main-content {
     display: flex;
     justify-content: center;
@@ -101,8 +103,13 @@ section.main-content {
 div.image-section {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 25px;
+    padding: 25px 0;
+}
+
+.swipe-icon.main_page_image {
+    display: none;
 }
 
 div.image-section > .main-image{ 
@@ -374,6 +381,7 @@ div.image-details {
 div.big-image {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
@@ -381,9 +389,35 @@ div.sublist-images {
     display: flex;
     justify-content: center;
 }
-div.big-image img {
+div.big-image > #main_image {
     width: 60%;
     border-radius: 15px;
+}
+
+.swipe-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.swipe-icon.prev_div {
+    position: relative;
+    left: 22px;
+}
+
+.swipe-icon.next_div {
+    position: relative;
+    right: 22px;
+}
+
+div.big-image > #previous_icon, div.big-image > #next_icon {
+    height: 2%;
+    width: 2%;
 }
 
 div.sublist-images img {
@@ -471,6 +505,11 @@ div.sublist-images img::after {
 
     div.image-section {
         padding: 0;
+    }
+
+    .swipe-icon.main_page_image {
+        display: flex;
+        position: absolute;
     }
 
     div.image-section > .main-image {
